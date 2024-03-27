@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'grace_forte.wsgi.application'
+WSGI_APPLICATION = 'grace_forte.wsgi.app'
 
 
 # Database
