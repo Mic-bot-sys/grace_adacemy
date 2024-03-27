@@ -15,4 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'grace_forte.settings')
 
 application = get_wsgi_application()
 
-app = application
+# app = application

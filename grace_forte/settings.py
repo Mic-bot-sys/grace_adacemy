@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import dj-database-url
 from pathlib import Path
 import os
 
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'grace_forte.wsgi.app'
+WSGI_APPLICATION = 'grace_forte.wsgi.application'
 
 
 # Database
