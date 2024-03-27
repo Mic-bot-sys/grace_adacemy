@@ -1,0 +1,2 @@
+celery -A <Project_name> worker -l info --without-gossip --without-mingle --without-heartbeat -Ofair --pool=solo
+celery -A grace_forte worker -l info --without-gossip --without-mingle --without-heartbeat -Ofair --pool=solo

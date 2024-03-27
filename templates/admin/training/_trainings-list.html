@@ -1,0 +1,30 @@
+{% load humanize %}
+<!-- <table class="table table-borderless datatable"> -->
+<table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Title</th>
+        <!-- <th scope="col">Summary</th> -->
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+        <th scope="col" style="visibility: hidden;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in trainings %}
+      <tr>
+        <td class="col-span-1">
+          <img style="height: 50px; width: 80px; border-radius: 5px" src="data:img/webp;base64,{{data.imageBase}}" alt="">
+        </td>
+        <td>{{data.title}}</td>
+        <!-- <td>{{data.summary|truncatechars:17}}</td>  -->
+        <td>₦ {{data.price|intcomma}}</td>
+        <!-- <td scope="row"><a href="#"> {{data.dateCreated|timesince|truncatechars:17}} ago</a></td> -->
+        <td><button class="btn btn-secondary btn-sm" onclick="onGetTrainingDetails(event,'{{data.Id}}')">Edit</button></td>
+        <td><button class="btn btn-danger btn-sm" onclick="onDelete(event,'{{data.Id}}', '{{forloop.counter0}}')">Delete</button></td>
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+  </table>

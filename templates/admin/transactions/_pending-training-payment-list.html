@@ -1,0 +1,29 @@
+{% load humanize %}
+<!-- <table class="table table-borderless datatable"> -->
+<table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">Customer</th>
+        <th scope="col">Enrolled Training</th>
+        <th scope="col">Amount Paid</th>
+        <th scope="col">Time</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+        <th scope="col" style="visibility: hidden;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in pending_transactions %}
+      <tr id="data-row-{{forloop.counter0}}"> 
+        <td>{{data.user.user_profile.lastName}} {{data.user.user_profile.firstName}}</td>
+        <td>{{data.enrolledCourse.title|truncatechars:17}}</td> 
+        <td>₦ {{data.expectedAmount|intcomma}}</td>
+        <td scope="row"><a href="#"> {{data.dateCreated|timesince|truncatechars:17}} ago</a></td>
+        <td><span class="badge bg-warning">{{data.paymentStatus}}</span></td>
+        <td><button class="btn btn-primary btn-sm" onclick="onGetPendingTrainingTransactionDetails(event,'{{data.Id}}')">View</button></td>
+        <td><button class="btn btn-success btn-sm" onclick="onApprove(event,'{{data.Id}}', '{{forloop.counter0}}')">Approve</button></td>
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+  </table>

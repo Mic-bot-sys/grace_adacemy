@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" accept=".jpg, .jpeg, .png" id="file-upload"> 
+<img src="#" alt="Preview Uploaded Image" id="file-preview">
+
+
+<script>
+    const input = document.getElementById('file-upload');
+    const previewPhoto = () => {
+    const file = input.files;
+    if (file) {
+        const fileReader = new FileReader();
+        const preview = document.getElementById('file-preview');
+        fileReader.onload = function (event) {
+            preview.setAttribute('src', event.target.result);
+        }
+        fileReader.readAsDataURL(file[0]);
+    }
+}
+input.addEventListener("change", previewPhoto);
+</script>
+</body>
+</html>

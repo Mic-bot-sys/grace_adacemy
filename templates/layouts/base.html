@@ -1,0 +1,438 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!-- /Added by HTTrack -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" sizes="16x16 32x32" />
+        <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">        {% block title %}{% endblock %}
+        <meta name="robots" content="max-image-preview:large" />
+        
+        {% block head %} {% endblock %}
+
+        </head>
+        {% block openbodyclass %}
+        <body data-rsssl="1" class="home page-template page-template-elementor_header_footer page page-id-1959 wp-custom-logo elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-1959">
+        {% endblock %}
+      
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+  
+        <div data-elementor-type="header" data-elementor-id="81" class="elementor elementor-81 elementor-location-header" data-elementor-post-type="elementor_library">
+            <div class="elementor-section-wrap">
+                <section
+                    class="elementor-section elementor-top-section elementor-element elementor-element-11b8b04f elementor-section-content-middle elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="11b8b04f"
+                    data-element_type="section"
+                    data-settings='{"background_background":"classic"}'
+                >
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-152246c9" data-id="152246c9" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div
+                                    class="elementor-element elementor-element-08d8fc3 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
+                                    data-id="08d8fc3"
+                                    data-element_type="widget"
+                                    data-widget_type="theme-site-logo.default"
+                                >
+                                    <div class="elementor-widget-container">
+                                        <style>
+                                            /*! elementor - v3.19.0 - 28-02-2024 */
+                                            .elementor-widget-image {
+                                                text-align: center;
+                                            }
+                                            .elementor-widget-image a {
+                                                display: inline-block;
+                                            }
+                                            .elementor-widget-image a img[src$=".svg"] {
+                                                width: 48px;
+                                            }
+                                            .elementor-widget-image img {
+                                                vertical-align: middle;
+                                                display: inline-block;
+                                            }
+                                        </style>
+                                        <div class="elementor-image">
+                                            <a href="{% url 'main:home' %}">
+                                                <img style="height: 90px; width: 97px;" src="{% static 'images/logo.png' %}" class="attachment-full size-full wp-image-1870" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-right: 10rem;" class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7fe594ed" data-id="7fe594ed" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div
+                                    class="elementor-element elementor-element-7f7e5855 elementor-nav-menu__align-right elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+                                    data-id="7f7e5855"
+                                    data-element_type="widget"
+                                    data-settings='{"full_width":"stretch","submenu_icon":{"value":"&lt;i class=\"fas fa-chevron-down\"&gt;&lt;\/i&gt;","library":"fa-solid"},"layout":"horizontal","toggle":"burger"}'
+                                    data-widget_type="nav-menu.default"
+                                >
+                                    <div class="elementor-widget-container">
+                                        <link rel="stylesheet" href="{% static 'wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css' %}" />
+                                        <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-slide">
+                                            <ul id="menu-1-7f7e5855" class="elementor-nav-menu">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1959 current_page_item menu-item-2033">
+                                                    <a href="{% url 'main:home' %}" aria-current="page" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'main:home' %}active{% endif %}">Home</a>
+                                                </li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030"><a href="{% url 'services:services' %}" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'services:services' %}active{% endif %}">Services</a></li>
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                                    <a href="{% url 'trainings:trainings' %}" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'trainings:trainings' %}active{% endif %}">Training</a>
+                                                </li>
+
+                                                {% if request.user.is_authenticated %}
+                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                                    <a href="#" class="elementor-item elementor-item-anchor">Transactions</a>
+                                                    <ul class="sub-menu elementor-nav-menu--dropdown">
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a href="{% url 'main:pending-bookings' %}" class="elementor-sub-item">Pending Bookings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a href="{% url 'main:approved-bookings' %}" class="elementor-sub-item">Approved Bookings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2026"><a href="{% url 'main:pending-trainings' %}" class="elementor-sub-item">Pending Trainings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2026"><a href="{% url 'main:approved-trainings' %}" class="elementor-sub-item">Approved Trainings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2028"><a href="{% url 'user_profile:user-profile' %}" class="elementor-sub-item">Profile</a></li>
+                                                    </ul>
+                                                </li>
+                                                {% endif %}
+
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                                    <a href="{% url 'main:contact' %}" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'main:contact' %}active{% endif %}">Contact</a>
+                                                </li>
+                                              
+                                                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="{% url 'main:about' %}" class="elementor-item">About</a></li>
+                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                            <a href="#" class="elementor-item elementor-item-anchor">Pagesfffffffffffffffffffffffff</a>
+                                            <ul class="sub-menu elementor-nav-menu--dropdown">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a href="../contact-us/index.html" class="elementor-sub-item">Contact Us</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2025"><a href="../team/index.html" class="elementor-sub-item">Team</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2026"><a href="../faq/index.html" class="elementor-sub-item">FAQ</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2028"><a href="../careers/index.html" class="elementor-sub-item">Careers</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2029"><a href="../clients/index.html" class="elementor-sub-item">Clients</a></li>
+                                            </ul>
+                                        </li> -->
+                                            </ul>
+                                        </nav>
+                                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+                                            <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i>
+                                            <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i> <span class="elementor-screen-only">Menu</span>
+                                        </div>
+                                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+                                            <ul id="menu-2-7f7e5855" class="elementor-nav-menu">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1959 current_page_item menu-item-2033">
+                                                    <a href="index.html" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a>
+                                                </li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030"><a href="services/index.html" class="elementor-item" tabindex="-1">Services</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="about-us/index.html" class="elementor-item" tabindex="-1">About</a></li>
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                                    <a href="#" class="elementor-item elementor-item-anchor" tabindex="-1">Pages</a>
+                                                    <ul class="sub-menu elementor-nav-menu--dropdown">
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a href="contact-us/index.html" class="elementor-sub-item" tabindex="-1">Contact Us</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2025"><a href="team/index.html" class="elementor-sub-item" tabindex="-1">Team</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2026"><a href="faq/index.html" class="elementor-sub-item" tabindex="-1">FAQ</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2028"><a href="careers/index.html" class="elementor-sub-item" tabindex="-1">Careers</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2029"><a href="clients/index.html" class="elementor-sub-item" tabindex="-1">Clients</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-eb40c5b" data-id="eb40c5b" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-5b7442c elementor-align-right elementor-widget elementor-widget-button" data-id="5b7442c" data-element_type="widget" data-widget_type="button.default">
+                                    <div class="elementor-widget-container" style="display: flex;justify-content: flex-end; align-items: center">
+                                   
+                                      
+                                   
+                                   
+                                    {% if user.is_authenticated %}
+                                    <div class="elementor-button-wrapper" style="margin-left: 1rem; ">
+                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="{% url 'authentication:logout' %}" style="color: grey;padding:0;background: transparent;border:none; font-size: 10px !important; max-width:250px">
+                                            <span class="elementor-button-content-wrapper">
+                                                    <span class="elementor-button-text" style="font-size: 12px; width: 100px">{{user.username}}</span>
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                    <div class="elementor-button-wrapper" style="margin-left: 1rem; ">
+                                        <a class="elementor-button elementor-button-link elementor-size-sm" href="{% url 'authentication:logout' %}" style="background: red;border:1px solid red; font-size: 12px !important; width:85px">
+                                            <span class="elementor-button-content-wrapper">
+                                                    <span class="elementor-button-text" style="font-size: 10px">Sign out</span>
+                                            </span>
+                                        </a>
+                                    </div>                                    
+                                     {% else %}
+                                     <div class="elementor-button-wrapper"  style="margin-left: 1rem">
+                                            <a class="elementor-button elementor-button-link elementor-size-sm" href="{% url 'authentication:auth' %}" style="font-size: 12px !important; width: 85px">
+                                                <span class="elementor-button-content-wrapper">
+                                                        <span class="elementor-button-text">Sign in</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="elementor-section elementor-top-section elementor-element elementor-element-bee9b73 elementor-section-content-middle elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="bee9b73"
+                    data-element_type="section"
+                    data-settings='{"background_background":"classic"}'
+                >
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-ce1af61" data-id="ce1af61" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div
+                                    class="elementor-element elementor-element-9ea99dd elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
+                                    data-id="9ea99dd"
+                                    data-element_type="widget"
+                                    data-widget_type="theme-site-logo.default"
+                                >
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-image">
+                                            <a href="{% url 'main:home' %}">
+                                                <!-- This is for the Mobile -->
+                                                <img style="height: 70px; width: 73px;" src="{% static 'images/logo.png' %}" class="attachment-full size-full wp-image-1870" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f43f3bd elementor-hidden-mobile" data-id="f43f3bd" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-dffd6d7 elementor-align-right elementor-widget elementor-widget-button" data-id="dffd6d7" data-element_type="widget" data-widget_type="button.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8a0d9fb" data-id="8a0d9fb" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div
+                                    class="elementor-element elementor-element-90d2050 elementor-nav-menu__align-right elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+                                    data-id="90d2050"
+                                    data-element_type="widget"
+                                    data-settings='{"full_width":"stretch","submenu_icon":{"value":"&lt;i class=\"fas fa-chevron-down\"&gt;&lt;\/i&gt;","library":"fa-solid"},"layout":"horizontal","toggle":"burger"}'
+                                    data-widget_type="nav-menu.default"
+                                >
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+                                            <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i>
+                                            <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i> <span class="elementor-screen-only">Menu</span>
+                                        </div>
+                                        <!-- The Mobile Navigation -->
+                                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="padding: 2rem 0">
+                                            <ul id="menu-2-90d2050" class="elementor-nav-menu">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1959 current_page_item menu-item-2033">
+                                                    <a href="{% url 'main:home' %}" aria-current="page" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'main:home' %}active{% endif %}" tabindex="-1">Home</a>
+                                                </li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030"><a href="{% url 'services:services' %}" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'services:services' %}active{% endif %}" tabindex="-1">Services</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2030"><a href="{% url 'trainings:trainings' %}" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'trainings:trainings' %}active{% endif %}" tabindex="-1">Training</a></li>
+                                                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="" class="elementor-item" tabindex="-1">About</a></li> -->
+                                                
+                                                {% if request.user.is_authenticated %}
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                                    <a href="#" class="elementor-item elementor-item-anchor">Transactions</a>
+                                                    <ul class="sub-menu elementor-nav-menu--dropdown">
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a href="{% url 'main:pending-bookings' %}" class="elementor-sub-item">Pending Bookings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a href="{% url 'main:approved-bookings' %}" class="elementor-sub-item">Approved Bookings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2026"><a href="{% url 'main:pending-trainings' %}" class="elementor-sub-item">Pending Trainings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2026"><a href="{% url 'main:approved-trainings' %}" class="elementor-sub-item">Approved Trainings</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2028"><a href="{% url 'user_profile:user-profile' %}" class="elementor-sub-item">Profile</a></li>
+                                                    </ul>
+                                                </li>
+                                                {% endif %}
+
+                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1866">
+                                                    <a href="{% url 'main:contact' %}" class="elementor-item elementor-item-{% if request.resolver_match.view_name == 'main:contact' %}active{% endif %}">Contact</a>
+                                                </li>
+
+                                                <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 3rem">
+                                                    {% if user.is_authenticated %}
+                                                        <h6>{{user.email}}</h6>
+                                                        <a href="{% url 'authentication:logout' %}" style="background-color: red; color: silver; border-radius: 6px; padding: 12px 3rem">Sign out</a>
+                                                    {% else %}
+                                                        <a href="{% url 'authentication:logout' %}" style="background-color: #0046ae; color: silver; border-radius: 6px; padding: 12px 3rem">Sign in</a>
+                                                    {% endif %}
+                                                    </div>
+                                               
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {% block content %}
+        
+        {% endblock %}
+
+        <div data-elementor-type="footer" data-elementor-id="78" class="elementor elementor-78 elementor-location-footer" data-elementor-post-type="elementor_library">
+            <div class="elementor-section-wrap">
+                <section
+                    class="elementor-section elementor-top-section elementor-element elementor-element-21fe9847 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="21fe9847"
+                    data-element_type="section"
+                    data-settings='{"background_background":"classic"}'
+                >
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-55d2dfcc" data-id="55d2dfcc" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <section
+                                    class="elementor-section elementor-inner-section elementor-element elementor-element-51abbb31 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                    data-id="51abbb31"
+                                    data-element_type="section"
+                                >
+                                    <div class="elementor-container elementor-column-gap-no">
+                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5c6df19" data-id="5c6df19" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-3173035 elementor-widget elementor-widget-heading" data-id="3173035" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h5 class="elementor-heading-title elementor-size-default">Connect with GraceForte</h5>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="elementor-element elementor-element-724f488 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                                                    data-id="724f488"
+                                                    data-element_type="widget"
+                                                    data-widget_type="divider.default"
+                                                >
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-divider">
+                                                            <span class="elementor-divider-separator"> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-element elementor-element-3db7886 elementor-widget elementor-widget-heading" data-id="3db7886" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h6 class="elementor-heading-title elementor-size-default">JOIN US ON:</h6>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="elementor-element elementor-element-f7bb1db elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                    data-id="f7bb1db"
+                                                    data-element_type="widget"
+                                                    data-widget_type="icon-list.default"
+                                                >
+                                                    <div class="elementor-widget-container">
+                                                        <link rel="stylesheet" href="{% static 'wp-content/plugins/elementor/assets/css/widget-icon-list.min.css' %}" />
+                                                        <ul class="elementor-icon-list-items">
+                                                            <li class="elementor-icon-list-item">
+                                                                    <span class="elementor-icon-list-icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg> </span>
+                                                                    <span class="elementor-icon-list-text">GraceForte</span>
+                                                            </li>
+                                                            <li class="elementor-icon-list-item">
+                                                                    <span class="elementor-icon-list-icon"> 
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>                                                                    </span>
+                                                                    <span class="elementor-icon-list-text">GraceForte</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4a661e0" data-id="4a661e0" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-1541aa8 elementor-widget elementor-widget-heading" data-id="1541aa8" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h5 class="elementor-heading-title elementor-size-default">Useful Information</h5>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="elementor-element elementor-element-91d755b elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                                                    data-id="91d755b"
+                                                    data-element_type="widget"
+                                                    data-widget_type="divider.default"
+                                                >
+                                                    <div class="elementor-widget-container">
+                                                        <div class="elementor-divider">
+                                                            <span class="elementor-divider-separator"> </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="elementor-element elementor-element-c381d33 elementor-widget elementor-widget-heading" data-id="c381d33" data-element_type="widget" data-widget_type="heading.default">
+                                                    <div class="elementor-widget-container">
+                                                        <h6 class="elementor-heading-title elementor-size-default">48, Ganiyu Bello street, <br>Felele, Expressway, Ibadan.</h6>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="elementor-element elementor-element-d525db7 elementor-widget__width-auto elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                    data-id="d525db7"
+                                                    data-element_type="widget"
+                                                    data-widget_type="icon-list.default"
+                                                >
+                                                    <div class="elementor-widget-container">
+                                                        <ul class="elementor-icon-list-items">
+                                                            <li class="elementor-icon-list-item">
+                                                                    <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span>
+                                                                    <span class="elementor-icon-list-text">(+234) 8055860778</span>
+                                                            </li>
+                                                            <li class="elementor-icon-list-item">
+                                                                    <span class="elementor-icon-list-icon"> <i aria-hidden="true" class="fas fa-envelope"></i> </span>
+                                                                    <span class="elementor-icon-list-text">graceforteacademy@gmail.com</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section
+                                    class="elementor-section elementor-inner-section elementor-element elementor-element-1beee025 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                    data-id="1beee025"
+                                    data-element_type="section"
+                                >
+                                    <div class="elementor-container elementor-column-gap-no">
+                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-151a8888" data-id="151a8888" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-7432a3ca elementor-widget elementor-widget-text-editor" data-id="7432a3ca" data-element_type="widget" data-widget_type="text-editor.default">
+                                                    <div class="elementor-widget-container">
+                                                        <p>Recording &amp; Sound Studio Site by Toluwalase</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2d27d5a1" data-id="2d27d5a1" data-element_type="column">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-50d078d4 elementor-widget elementor-widget-text-editor" data-id="50d078d4" data-element_type="widget" data-widget_type="text-editor.default">
+                                                    <div class="elementor-widget-container">
+                                                        <p>Copyright © 2024. All Right Reserved.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+    {% block resource %}
+    
+    {% endblock %}
+
+
+
+</html>

@@ -1,0 +1,326 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block title %}
+<title>Pending Booking Transactions</title>
+{% endblock %}
+
+{% block head %}
+    {% include 'partials/_servicesHeadSectionPartial.html' %}
+      <link href="{% static 'asse/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+      <link href="{% static 'asse/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+      <link href="{% static 'asse/plugins/custom/fullcalendar/fullcalendar.bundle.css' %}" rel="stylesheet" type="text/css" />
+      <link href="{% static 'asse/plugins/custom/datatables/datatables.bundle.css' %}" rel="stylesheet" type="text/css" />
+    
+
+{% endblock %}
+
+
+{% block openbodyclass %}
+    <body data-rsssl="1" class="page-template page-template-elementor_header_footer page page-id-1961 page-parent wp-custom-logo elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-1961">
+{% endblock %}
+
+{% block content %}
+<div data-elementor-type="wp-page" data-elementor-id="1961" class="elementor elementor-1961" data-elementor-post-type="page">
+
+<section style="padding-top: 0 !important" class="elementor-section elementor-top-section elementor-element elementor-element-3acb1acc elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="3acb1acc"
+    data-element_type="section" >
+    
+    <style>
+      @media (max-width: 576px) {
+        .transactions{
+          width: 100% !important;
+        }
+      }
+
+      @media(min-width: 577px) and (max-width: 768px){
+        .transactions{
+          width: 100% !important;
+        }
+      }
+
+      @media(min-width: 769px) and (max-width: 1024px){
+        .transactions{
+          width: 100% !important;
+          margin: 1rem 0 !important;
+        }
+      }
+    </style>
+    <div class="elementor-container elementor-column-gap-no">
+   <!--begin::Col-->
+								<div class="col-xl-12 mt-4 mb-2 transactions">
+									<!--begin::List Widget 4-->
+									<div class="card card-xl-stretch mb-5 mb-xl-8">
+										<!--begin::Header-->
+										<div class="card-header border-0 pt-5">
+											<h3 class="card-title align-items-start flex-column">
+												<span class="card-label fw-bolder text-dark">Pending Booking Transactions</span>
+												<span class="text-muted mt-1 fw-bold fs-7">List of Service Bookings that has not been approved </span>
+											</h3>
+                      
+										</div>
+										<!--end::Header-->
+										<!--begin::Body-->
+										<div class="card-body pt-5" id="pendingTrainingsId">
+											<!--begin::Item-->
+                      {% if length == 0 %}
+                      <div class="row mb-7 text-center">
+                        <p class="text-muted">No Pending Transactions yet</p>
+                      </div>
+                      {% endif %}
+                      {% for transaction in pending_transactions %}
+                      <script>
+                        function myFunction(x) {
+                          if (x.matches) { // If media query matches
+                            let z =document.createElement("div")
+                            z.innerHTML = `<div class="d-flex align-items-sm-center mb-7">
+                              <!--begin::Symbol-->
+                              <div class="symbol symbol-50px me-5">
+                                <span class="symbol-label">
+                                  <img loading="lazy" src="data:img/webp;base64,{{transaction.service.imageBase}}" class="h-50 align-self-center" alt="" />
+                                </span>
+                              </div>
+                              <!--end::Symbol-->
+                              <!--begin::Section-->
+                              
+                              <div class="d-flex align-items-center flex-row-fluid flex-wrap">
+                                <div class="flex-grow-1 me-2">
+                                  <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder">{{transaction.service.title|truncatechars:10}}</a>
+                                  <span class="text-muted fw-bold d-block fs-7">{{transaction.account.accountName|truncatechars:7}}</span>
+                                  <span class="text-muted fw-bold d-block fs-7">{{transaction.account.bank|truncatechars:10}}</span>
+                                </div>
+                                <div class="d-flex flex-column">                            
+                                <span class="fw-bolder my-2" style="text-align: end !important">₦{{transaction.expectedAmount|intcomma}}</span>
+                                <span class="fw-bolder my-2" style="text-align: end !important">{{transaction.dateCreated|timesince|truncatechars:17}} ago</span>
+                                </div>
+                              </div>
+                             
+                              <!--end::Section-->
+                            </div>`
+                            document.getElementById("pendingTrainingsId").appendChild(z)
+                          } else {
+                            let v =document.createElement("div")
+                            v.innerHTML = `<div class="d-flex align-items-sm-center mb-7">
+                              <!--begin::Symbol-->
+                              <div class="symbol symbol-50px me-5">
+                                <span class="symbol-label">
+                                  <img loading="lazy" src="data:img/webp;base64,{{transaction.service.imageBase}}" class="h-50 align-self-center" alt="" />
+                                </span>
+                              </div>
+                              <!--end::Symbol-->
+                              <!--begin::Section-->
+                              
+                              <div class="d-flex align-items-center flex-row-fluid flex-wrap">
+                                <div class="flex-grow-1 me-2">
+                                  <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder">{{transaction.service.title}}</a>
+                                  <span class="text-muted fw-bold d-block fs-7">{{transaction.account.accountName}}</span>
+                                  <span class="text-muted fw-bold d-block fs-7">{{transaction.account.bank|truncatechars:15}}</span>
+                                </div>
+                                <div class="d-flex flex-column align-items-end">                            
+                                <span class="badge badge-light fw-bolder my-2 fs-6" style="text-align: end !important">₦{{transaction.expectedAmount|intcomma}}</span>
+                                <span class="fw-bolder my-2" style="text-align: end !important">{{transaction.dateCreated|timesince}} ago</span>
+                                </div>
+                              </div>
+                             
+                              <!--end::Section-->
+                            </div>`
+                            document.getElementById("pendingTrainingsId").appendChild(v)
+                          }
+                        }
+                        
+                        // Create a MediaQueryList object
+                        var x = window.matchMedia("(max-width: 576px)")
+                        
+                        // Call listener function at run time
+                        myFunction(x);
+                        
+                        // Attach listener function on state changes
+                        x.addEventListener("change", function() {
+                          myFunction(x);
+                        });
+                      </script>
+											
+                      {% endfor %}
+											<!--end::Item-->
+										</div>
+										<!--end::Body-->
+									</div>
+									<!--end::List Widget 4-->
+								</div>
+								<!--end::Col-->
+  </div>
+    </section>
+
+    
+            
+</div>
+{% endblock %}
+
+
+    {% block resource %}
+        <link rel="stylesheet" id="flatpickr-css" href="{% static 'wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.css' %}" media="all" />
+        <link rel="stylesheet" id="e-animations-css" href="{% static 'wp-content/plugins/elementor/assets/lib/animations/animations.min.css' %}" media="all" />
+        <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+        <script src="{% static 'wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js' %}" id="hello-theme-frontend-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.minf269.js' %}" id="smartmenus-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.mineda1.js' %}" id="flatpickr-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min3958.js' %}" id="jquery-numerator-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min2c7c.js' %}" id="elementor-pro-webpack-runtime-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min6e54.js' %}" id="elementor-webpack-runtime-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min6e54.js' %}" id="elementor-frontend-modules-js"></script>
+        <script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-inert.min0226.js' %}" id="wp-polyfill-inert-js"></script>
+        <script src="{% static 'wp-includes/js/dist/vendor/regenerator-runtime.min8fa4.js' %}" id="regenerator-runtime-js"></script>
+        <script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js' %}" id="wp-polyfill-js"></script>
+        <script src="{% static 'wp-includes/js/dist/hooks.min2ebd.js' %}" id="wp-hooks-js"></script>
+        <script src="{% static 'wp-includes/js/dist/i18n.minf92f.js' %}" id="wp-i18n-js"></script>
+        <script id="wp-i18n-js-after">
+            wp.i18n.setLocaleData({ "text direction\u0004ltr": ["ltr"] });
+        </script>
+        <script id="elementor-pro-frontend-js-before">
+            var ElementorProFrontendConfig = {
+                ajaxurl: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-admin\/admin-ajax.php",
+                nonce: "b037b9e090",
+                urls: { assets: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-content\/plugins\/elementor-pro\/assets\/", rest: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-json\/" },
+                shareButtonsNetworks: {
+                    facebook: { title: "Facebook", has_counter: true },
+                    twitter: { title: "Twitter" },
+                    linkedin: { title: "LinkedIn", has_counter: true },
+                    pinterest: { title: "Pinterest", has_counter: true },
+                    reddit: { title: "Reddit", has_counter: true },
+                    vk: { title: "VK", has_counter: true },
+                    odnoklassniki: { title: "OK", has_counter: true },
+                    tumblr: { title: "Tumblr" },
+                    digg: { title: "Digg" },
+                    skype: { title: "Skype" },
+                    stumbleupon: { title: "StumbleUpon", has_counter: true },
+                    mix: { title: "Mix" },
+                    telegram: { title: "Telegram" },
+                    pocket: { title: "Pocket", has_counter: true },
+                    xing: { title: "XING", has_counter: true },
+                    whatsapp: { title: "WhatsApp" },
+                    email: { title: "Email" },
+                    print: { title: "Print" },
+                },
+                facebook_sdk: { lang: "en_US", app_id: "" },
+                lottie: { defaultAnimationUrl: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" },
+            };
+        </script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/js/frontend.min2c7c.js' %}" id="elementor-pro-frontend-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js' %}" id="elementor-waypoints-js"></script>
+        <script src="{% static 'wp-includes/js/jquery/ui/core.min3f14.js' %}" id="jquery-ui-core-js"></script>
+        <script id="elementor-frontend-js-before">
+            var elementorFrontendConfig = {
+                environmentMode: { edit: false, wpPreview: false, isScriptDebug: false },
+                i18n: {
+                    shareOnFacebook: "Share on Facebook",
+                    shareOnTwitter: "Share on Twitter",
+                    pinIt: "Pin it",
+                    download: "Download",
+                    downloadImage: "Download image",
+                    fullscreen: "Fullscreen",
+                    zoom: "Zoom",
+                    share: "Share",
+                    playVideo: "Play Video",
+                    previous: "Previous",
+                    next: "Next",
+                    close: "Close",
+                    a11yCarouselWrapperAriaLabel: "Carousel | Horizontal scrolling: Arrow Left & Right",
+                    a11yCarouselPrevSlideMessage: "Previous slide",
+                    a11yCarouselNextSlideMessage: "Next slide",
+                    a11yCarouselFirstSlideMessage: "This is the first slide",
+                    a11yCarouselLastSlideMessage: "This is the last slide",
+                    a11yCarouselPaginationBulletMessage: "Go to slide",
+                },
+                is_rtl: false,
+                breakpoints: { xs: 0, sm: 480, md: 768, lg: 1025, xl: 1440, xxl: 1600 },
+                responsive: {
+                    breakpoints: {
+                        mobile: { label: "Mobile Portrait", value: 767, default_value: 767, direction: "max", is_enabled: true },
+                        mobile_extra: { label: "Mobile Landscape", value: 880, default_value: 880, direction: "max", is_enabled: false },
+                        tablet: { label: "Tablet Portrait", value: 1024, default_value: 1024, direction: "max", is_enabled: true },
+                        tablet_extra: { label: "Tablet Landscape", value: 1200, default_value: 1200, direction: "max", is_enabled: false },
+                        laptop: { label: "Laptop", value: 1366, default_value: 1366, direction: "max", is_enabled: false },
+                        widescreen: { label: "Widescreen", value: 2400, default_value: 2400, direction: "min", is_enabled: false },
+                    },
+                },
+                version: "3.19.4",
+                is_static: false,
+                experimentalFeatures: {
+                    e_optimized_assets_loading: true,
+                    e_optimized_css_loading: true,
+                    additional_custom_breakpoints: true,
+                    theme_builder_v2: true,
+                    "hello-theme-header-footer": true,
+                    block_editor_assets_optimize: true,
+                    "ai-layout": true,
+                    "landing-pages": true,
+                    e_image_loading_optimization: true,
+                    e_global_styleguide: true,
+                    "page-transitions": true,
+                    notes: true,
+                    loop: true,
+                    "form-submissions": true,
+                    e_scroll_snap: true,
+                },
+                urls: { assets: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-content\/plugins\/elementor\/assets\/" },
+                swiperClass: "swiper-container",
+                settings: { page: [], editorPreferences: [] },
+                kit: {
+                    active_breakpoints: ["viewport_mobile", "viewport_tablet"],
+                    global_image_lightbox: "yes",
+                    lightbox_enable_counter: "yes",
+                    lightbox_enable_fullscreen: "yes",
+                    lightbox_enable_zoom: "yes",
+                    lightbox_enable_share: "yes",
+                    lightbox_title_src: "title",
+                    lightbox_description_src: "description",
+                    hello_header_logo_type: "logo",
+                    hello_header_menu_layout: "horizontal",
+                    hello_footer_logo_type: "logo",
+                },
+                post: { id: 1961, title: "Studio%20%E2%80%93%20Exodio", excerpt: "", featuredImage: false },
+            };
+        </script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/js/frontend.min6e54.js' %}" id="elementor-frontend-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/js/elements-handlers.min2c7c.js' %}" id="pro-elements-handlers-js"></script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+                for (let i = 0; i < document.forms.length; ++i) {
+                    let form = document.forms[i];
+                    if ($(form).attr("method") != "get") {
+                        $(form).append('<input type="hidden" name="_ESqeFcnpgZQ" value="nucIej@8pkqOBaU" />');
+                    }
+                    if ($(form).attr("method") != "get") {
+                        $(form).append('<input type="hidden" name="CrypzDGmkB" value="NJm]Y*6DRf" />');
+                    }
+                }
+
+                $(document).on("submit", "form", function () {
+                    if ($(this).attr("method") != "get") {
+                        $(this).append('<input type="hidden" name="_ESqeFcnpgZQ" value="nucIej@8pkqOBaU" />');
+                    }
+                    if ($(this).attr("method") != "get") {
+                        $(this).append('<input type="hidden" name="CrypzDGmkB" value="NJm]Y*6DRf" />');
+                    }
+                    return true;
+                });
+
+                jQuery.ajaxSetup({
+                    beforeSend: function (e, data) {
+                        if (data.type !== "POST") return;
+
+                        if (typeof data.data === "object" && data.data !== null) {
+                            data.data.append("_ESqeFcnpgZQ", "nucIej@8pkqOBaU");
+                            data.data.append("CrypzDGmkB", "NJm]Y*6DRf");
+                        } else {
+                            data.data = data.data + "&_ESqeFcnpgZQ=nucIej@8pkqOBaU&CrypzDGmkB=NJm]Y*6DRf";
+                        }
+                    },
+                });
+            });
+        </script>
+
+    {% endblock %}

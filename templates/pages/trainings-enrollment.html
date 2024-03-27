@@ -1,0 +1,801 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+<title>Training Enrollment</title>
+{% endblock %}
+
+{% block head %}
+    {% include 'partials/_servicesHeadSectionPartial.html' %}
+{% endblock %}
+
+
+
+{% block openbodyclass %}
+    <body data-rsssl="1" class="page-template page-template-elementor_header_footer page page-id-1961 page-parent wp-custom-logo elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-1961">
+{% endblock %}
+
+{% block content %}
+        <div data-elementor-type="wp-page" data-elementor-id="1961" class="elementor elementor-1961" data-elementor-post-type="page">
+            <section
+                class="elementor-section elementor-top-section elementor-element elementor-element-2bd989ef elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="2bd989ef"
+                data-element_type="section"
+            >
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-271636a2 elementor-hidden-tablet elementor-hidden-mobile" data-id="271636a2" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <section
+                                class="elementor-section elementor-inner-section elementor-element elementor-element-781823d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                data-id="781823d1"
+                                data-element_type="section"
+                            >
+                                <div class="elementor-container elementor-column-gap-no">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-58aa9102" data-id="58aa9102" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                class="elementor-element elementor-element-7c44f71a elementor-invisible elementor-widget elementor-widget-image"
+                                                data-id="7c44f71a"
+                                                data-element_type="widget"
+                                                data-settings='{"_animation":"slideInLeft"}'
+                                                data-widget_type="image.default"
+                                            >
+                                                <div class="elementor-widget-container">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="800"
+                                                        height="937"
+                                                        src="{% static 'wp-content/uploads/sites/62/2022/01/studio-image-1-874x1024.jpg' %}"
+                                                        class="attachment-large size-large wp-image-768"
+                                                        alt=""
+                                                        srcset="
+                                                            https://templatekit.tokomoo.com/recordkit/wp-content/uploads/sites/62/2022/01/studio-image-1-874x1024.jpg  874w,
+                                                            https://templatekit.tokomoo.com/recordkit/wp-content/uploads/sites/62/2022/01/studio-image-1-256x300.jpg   256w,
+                                                            https://templatekit.tokomoo.com/recordkit/wp-content/uploads/sites/62/2022/01/studio-image-1-768x900.jpg   768w,
+                                                            https://templatekit.tokomoo.com/recordkit/wp-content/uploads/sites/62/2022/01/studio-image-1-800x938.jpg   800w,
+                                                            https://templatekit.tokomoo.com/recordkit/wp-content/uploads/sites/62/2022/01/studio-image-1.jpg          1024w
+                                                        "
+                                                        sizes="(max-width: 800px) 100vw, 800px"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1ae27294" data-id="1ae27294" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div
+                                class="elementor-element elementor-element-6e475ad elementor-widget-divider--view-line_text elementor-widget-divider--element-align-right elementor-widget elementor-widget-divider"
+                                data-id="6e475ad"
+                                data-element_type="widget"
+                                data-widget_type="divider.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <style>
+                                        /*! elementor - v3.19.0 - 28-02-2024 */
+                                        .elementor-widget-divider {
+                                            --divider-border-style: none;
+                                            --divider-border-width: 1px;
+                                            --divider-color: #0c0d0e;
+                                            --divider-icon-size: 20px;
+                                            --divider-element-spacing: 10px;
+                                            --divider-pattern-height: 24px;
+                                            --divider-pattern-size: 20px;
+                                            --divider-pattern-url: none;
+                                            --divider-pattern-repeat: repeat-x;
+                                        }
+                                        .elementor-widget-divider .elementor-divider {
+                                            display: flex;
+                                        }
+                                        .elementor-widget-divider .elementor-divider__text {
+                                            font-size: 15px;
+                                            line-height: 1;
+                                            max-width: 95%;
+                                        }
+                                        .elementor-widget-divider .elementor-divider__element {
+                                            margin: 0 var(--divider-element-spacing);
+                                            flex-shrink: 0;
+                                        }
+                                        .elementor-widget-divider .elementor-icon {
+                                            font-size: var(--divider-icon-size);
+                                        }
+                                        .elementor-widget-divider .elementor-divider-separator {
+                                            display: flex;
+                                            margin: 0;
+                                            direction: ltr;
+                                        }
+                                        .elementor-widget-divider--view-line_icon .elementor-divider-separator,
+                                        .elementor-widget-divider--view-line_text .elementor-divider-separator {
+                                            align-items: center;
+                                        }
+                                        .elementor-widget-divider--view-line_icon .elementor-divider-separator:after,
+                                        .elementor-widget-divider--view-line_icon .elementor-divider-separator:before,
+                                        .elementor-widget-divider--view-line_text .elementor-divider-separator:after,
+                                        .elementor-widget-divider--view-line_text .elementor-divider-separator:before {
+                                            display: block;
+                                            content: "";
+                                            border-block-end: 0;
+                                            flex-grow: 1;
+                                            border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
+                                        }
+                                        .elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator > .elementor-divider__svg:first-of-type {
+                                            flex-grow: 0;
+                                            flex-shrink: 100;
+                                        }
+                                        .elementor-widget-divider--element-align-left .elementor-divider-separator:before {
+                                            content: none;
+                                        }
+                                        .elementor-widget-divider--element-align-left .elementor-divider__element {
+                                            margin-left: 0;
+                                        }
+                                        .elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator > .elementor-divider__svg:last-of-type {
+                                            flex-grow: 0;
+                                            flex-shrink: 100;
+                                        }
+                                        .elementor-widget-divider--element-align-right .elementor-divider-separator:after {
+                                            content: none;
+                                        }
+                                        .elementor-widget-divider--element-align-right .elementor-divider__element {
+                                            margin-right: 0;
+                                        }
+                                        .elementor-widget-divider--element-align-start .elementor-divider .elementor-divider-separator > .elementor-divider__svg:first-of-type {
+                                            flex-grow: 0;
+                                            flex-shrink: 100;
+                                        }
+                                        .elementor-widget-divider--element-align-start .elementor-divider-separator:before {
+                                            content: none;
+                                        }
+                                        .elementor-widget-divider--element-align-start .elementor-divider__element {
+                                            margin-inline-start: 0;
+                                        }
+                                        .elementor-widget-divider--element-align-end .elementor-divider .elementor-divider-separator > .elementor-divider__svg:last-of-type {
+                                            flex-grow: 0;
+                                            flex-shrink: 100;
+                                        }
+                                        .elementor-widget-divider--element-align-end .elementor-divider-separator:after {
+                                            content: none;
+                                        }
+                                        .elementor-widget-divider--element-align-end .elementor-divider__element {
+                                            margin-inline-end: 0;
+                                        }
+                                        .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+                                            border-block-start: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
+                                        }
+                                        .elementor-widget-divider--separator-type-pattern {
+                                            --divider-border-style: none;
+                                        }
+                                        .elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,
+                                        .elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,
+                                        .elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,
+                                        .elementor-widget-divider--separator-type-pattern:not([class*="elementor-widget-divider--view"]) .elementor-divider-separator {
+                                            width: 100%;
+                                            min-height: var(--divider-pattern-height);
+                                            -webkit-mask-size: var(--divider-pattern-size) 100%;
+                                            mask-size: var(--divider-pattern-size) 100%;
+                                            -webkit-mask-repeat: var(--divider-pattern-repeat);
+                                            mask-repeat: var(--divider-pattern-repeat);
+                                            background-color: var(--divider-color);
+                                            -webkit-mask-image: var(--divider-pattern-url);
+                                            mask-image: var(--divider-pattern-url);
+                                        }
+                                        .elementor-widget-divider--no-spacing {
+                                            --divider-pattern-size: auto;
+                                        }
+                                        .elementor-widget-divider--bg-round {
+                                            --divider-pattern-repeat: round;
+                                        }
+                                        .rtl .elementor-widget-divider .elementor-divider__text {
+                                            direction: rtl;
+                                        }
+                                        .e-con-inner > .elementor-widget-divider,
+                                        .e-con > .elementor-widget-divider {
+                                            width: var(--container-widget-width, 100%);
+                                            --flex-grow: var(--container-widget-flex-grow);
+                                        }
+                                    </style>
+                                    <div class="elementor-divider">
+                                        <span class="elementor-divider-separator">
+                                            <span class="elementor-divider__text elementor-divider__element"> enroll course </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-6320a1b7 elementor-widget elementor-widget-heading" data-id="6320a1b7" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Enroll for this Now</h2>
+                                </div>
+                            </div>
+                            <div
+                                class="elementor-element elementor-element-f0322bf elementor-button-align-stretch elementor-widget elementor-widget-form"
+                                data-id="f0322bf"
+                                data-element_type="widget"
+                                data-settings='{"step_next_label":"Next","step_previous_label":"Previous","button_width":"40","step_type":"number_text","step_icon_shape":"circle"}'
+                                data-widget_type="form.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <style>
+                                        /*! elementor-pro - v3.15.0 - 31-07-2023 */
+                                        .elementor-button.elementor-hidden,
+                                        .elementor-hidden {
+                                            display: none;
+                                        }
+                                        .e-form__step {
+                                            width: 100%;
+                                        }
+                                        .e-form__step:not(.elementor-hidden) {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                        }
+                                        .e-form__buttons {
+                                            flex-wrap: wrap;
+                                        }
+                                        .e-form__buttons,
+                                        .e-form__buttons__wrapper {
+                                            display: flex;
+                                        }
+                                        .e-form__indicators {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            flex-wrap: nowrap;
+                                            font-size: 13px;
+                                            margin-bottom: var(--e-form-steps-indicators-spacing);
+                                        }
+                                        .e-form__indicators__indicator {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-basis: 0;
+                                            padding: 0 var(--e-form-steps-divider-gap);
+                                        }
+                                        .e-form__indicators__indicator__progress {
+                                            width: 100%;
+                                            position: relative;
+                                            background-color: var(--e-form-steps-indicator-progress-background-color);
+                                            border-radius: var(--e-form-steps-indicator-progress-border-radius);
+                                            overflow: hidden;
+                                        }
+                                        .e-form__indicators__indicator__progress__meter {
+                                            width: var(--e-form-steps-indicator-progress-meter-width, 0);
+                                            height: var(--e-form-steps-indicator-progress-height);
+                                            line-height: var(--e-form-steps-indicator-progress-height);
+                                            padding-right: 15px;
+                                            border-radius: var(--e-form-steps-indicator-progress-border-radius);
+                                            background-color: var(--e-form-steps-indicator-progress-color);
+                                            color: var(--e-form-steps-indicator-progress-meter-color);
+                                            text-align: right;
+                                            transition: width 0.1s linear;
+                                        }
+                                        .e-form__indicators__indicator:first-child {
+                                            padding-left: 0;
+                                        }
+                                        .e-form__indicators__indicator:last-child {
+                                            padding-right: 0;
+                                        }
+                                        .e-form__indicators__indicator--state-inactive {
+                                            color: var(--e-form-steps-indicator-inactive-primary-color, #c2cbd2);
+                                        }
+                                        .e-form__indicators__indicator--state-inactive [class*="indicator--shape-"]:not(.e-form__indicators__indicator--shape-none) {
+                                            background-color: var(--e-form-steps-indicator-inactive-secondary-color, #fff);
+                                        }
+                                        .e-form__indicators__indicator--state-inactive object,
+                                        .e-form__indicators__indicator--state-inactive svg {
+                                            fill: var(--e-form-steps-indicator-inactive-primary-color, #c2cbd2);
+                                        }
+                                        .e-form__indicators__indicator--state-active {
+                                            color: var(--e-form-steps-indicator-active-primary-color, #39b54a);
+                                            border-color: var(--e-form-steps-indicator-active-secondary-color, #fff);
+                                        }
+                                        .e-form__indicators__indicator--state-active [class*="indicator--shape-"]:not(.e-form__indicators__indicator--shape-none) {
+                                            background-color: var(--e-form-steps-indicator-active-secondary-color, #fff);
+                                        }
+                                        .e-form__indicators__indicator--state-active object,
+                                        .e-form__indicators__indicator--state-active svg {
+                                            fill: var(--e-form-steps-indicator-active-primary-color, #39b54a);
+                                        }
+                                        .e-form__indicators__indicator--state-completed {
+                                            color: var(--e-form-steps-indicator-completed-secondary-color, #fff);
+                                        }
+                                        .e-form__indicators__indicator--state-completed [class*="indicator--shape-"]:not(.e-form__indicators__indicator--shape-none) {
+                                            background-color: var(--e-form-steps-indicator-completed-primary-color, #39b54a);
+                                        }
+                                        .e-form__indicators__indicator--state-completed .e-form__indicators__indicator__label {
+                                            color: var(--e-form-steps-indicator-completed-primary-color, #39b54a);
+                                        }
+                                        .e-form__indicators__indicator--state-completed .e-form__indicators__indicator--shape-none {
+                                            color: var(--e-form-steps-indicator-completed-primary-color, #39b54a);
+                                            background-color: initial;
+                                        }
+                                        .e-form__indicators__indicator--state-completed object,
+                                        .e-form__indicators__indicator--state-completed svg {
+                                            fill: var(--e-form-steps-indicator-completed-secondary-color, #fff);
+                                        }
+                                        .e-form__indicators__indicator__icon {
+                                            width: var(--e-form-steps-indicator-padding, 30px);
+                                            height: var(--e-form-steps-indicator-padding, 30px);
+                                            font-size: var(--e-form-steps-indicator-icon-size);
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            overflow: hidden;
+                                            margin-bottom: 10px;
+                                        }
+                                        .e-form__indicators__indicator__icon img,
+                                        .e-form__indicators__indicator__icon object,
+                                        .e-form__indicators__indicator__icon svg {
+                                            width: var(--e-form-steps-indicator-icon-size);
+                                            height: auto;
+                                        }
+                                        .e-form__indicators__indicator__icon .e-font-icon-svg {
+                                            height: 1em;
+                                        }
+                                        .e-form__indicators__indicator__number {
+                                            width: var(--e-form-steps-indicator-padding, 30px);
+                                            height: var(--e-form-steps-indicator-padding, 30px);
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            margin-bottom: 10px;
+                                        }
+                                        .e-form__indicators__indicator--shape-circle {
+                                            border-radius: 50%;
+                                        }
+                                        .e-form__indicators__indicator--shape-square {
+                                            border-radius: 0;
+                                        }
+                                        .e-form__indicators__indicator--shape-rounded {
+                                            border-radius: 5px;
+                                        }
+                                        .e-form__indicators__indicator--shape-none {
+                                            border: 0;
+                                        }
+                                        .e-form__indicators__indicator__label {
+                                            text-align: center;
+                                        }
+                                        .e-form__indicators__indicator__separator {
+                                            width: 100%;
+                                            height: var(--e-form-steps-divider-width);
+                                            background-color: #babfc5;
+                                        }
+                                        .e-form__indicators--type-icon,
+                                        .e-form__indicators--type-icon_text,
+                                        .e-form__indicators--type-number,
+                                        .e-form__indicators--type-number_text {
+                                            align-items: flex-start;
+                                        }
+                                        .e-form__indicators--type-icon .e-form__indicators__indicator__separator,
+                                        .e-form__indicators--type-icon_text .e-form__indicators__indicator__separator,
+                                        .e-form__indicators--type-number .e-form__indicators__indicator__separator,
+                                        .e-form__indicators--type-number_text .e-form__indicators__indicator__separator {
+                                            margin-top: calc(var(--e-form-steps-indicator-padding, 30px) / 2 - var(--e-form-steps-divider-width, 1px) / 2);
+                                        }
+                                        .elementor-field-type-hidden {
+                                            display: none;
+                                        }
+                                        .elementor-field-type-html {
+                                            display: inline-block;
+                                        }
+                                        .elementor-login .elementor-lost-password,
+                                        .elementor-login .elementor-remember-me {
+                                            font-size: 0.85em;
+                                        }
+                                        .elementor-field-type-recaptcha_v3 .elementor-field-label {
+                                            display: none;
+                                        }
+                                        .elementor-field-type-recaptcha_v3 .grecaptcha-badge {
+                                            z-index: 1;
+                                        }
+                                        .elementor-button .elementor-form-spinner {
+                                            order: 3;
+                                        }
+                                        .elementor-form .elementor-button > span {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                        .elementor-form .elementor-button .elementor-button-text {
+                                            white-space: normal;
+                                            flex-grow: 0;
+                                        }
+                                        .elementor-form .elementor-button svg {
+                                            height: auto;
+                                        }
+                                        .elementor-form .elementor-button .e-font-icon-svg {
+                                            height: 1em;
+                                        }
+                                        .elementor-select-wrapper .select-caret-down-wrapper {
+                                            position: absolute;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            inset-inline-end: 10px;
+                                            pointer-events: none;
+                                            font-size: 11px;
+                                        }
+                                        .elementor-select-wrapper .select-caret-down-wrapper svg {
+                                            display: unset;
+                                            width: 1em;
+                                            aspect-ratio: unset;
+                                            fill: currentColor;
+                                        }
+                                        .elementor-select-wrapper .select-caret-down-wrapper i {
+                                            font-size: 19px;
+                                            line-height: 2;
+                                        }
+                                        .elementor-select-wrapper.remove-before:before {
+                                            content: "" !important;
+                                        }
+                                    </style>
+
+                                    {% if user.is_authenticated %}
+                                    <!-- Form after the User has been authenticated -->
+                                    <form enctype="multipart/form-data" method="post"  onsubmit="onPostTrainingEnrollment(event)">
+                                    {% csrf_token %}
+
+                                    {% if request.user.is_authenticated %}
+                                        <input readonly type="hidden" name="courseId" id="courseId" value="{{course.Id}}" />
+                                        <input readonly type="hidden" name="accountId" id="accountId" value="{{request.session.accountId}}" />
+                                        {% endif %}
+
+                                        <div class="elementor-form-fields-wrapper elementor-labels-above">                                           
+                                            <div  class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_6170a0b elementor-col-100 elementor-field-required">
+                                                <h6>Payment Details</h6>
+                                                <hr style="color: silver; width: 100%; height: 3px; background-color: silver; border: none; border-radius: 50%">
+                                            </div>
+                                            <div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_6b2a274 elementor-col-100 elementor-field-required">
+                                                <label for="form-field-field_6b2a274" class="elementor-field-label">Account Name </label>
+                                                <input
+                                                    readonly
+                                                    size="1"
+                                                    type="text"
+                                                    name="form_fields[field_6b2a274]"
+                                                    id="form-field-field_6b2a274"
+                                                    class="elementor-field elementor-size-md elementor-field-textual"
+                                                    placeholder="(081) 891 - 9189"
+                                                    required="required"
+                                                    aria-required="true"
+                                                    pattern="[0-9()#&amp;+*-=.]+"
+                                                    title="Only numbers and phone characters (#, -, *, etc) are accepted."
+                                                    value="{{request.session.accountName}}"
+                                                />
+                                            </div>
+                                            <div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_6b2a274 elementor-col-50 elementor-field-required">
+                                                <label for="form-field-field_6b2a274" class="elementor-field-label">Account Number </label>
+                                                <input
+                                                    readonly
+                                                    size="1"
+                                                    type="tel"
+                                                    name="form_fields[field_6b2a274]"
+                                                    id="form-field-field_6b2a274"
+                                                    class="elementor-field elementor-size-md elementor-field-textual"
+                                                    placeholder="(081) 891 - 9189"
+                                                    required="required"
+                                                    aria-required="true"
+                                                    pattern="[0-9()#&amp;+*-=.]+"
+                                                    title="Only numbers and phone characters (#, -, *, etc) are accepted."
+                                                    value="2002048594"
+                                                />
+                                            </div>
+                                            <div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_6b2a274 elementor-col-50 elementor-field-required">
+                                                <label for="form-field-field_6b2a274" class="elementor-field-label">Bank </label>
+                                                <input
+                                                    readonly
+                                                    size="1"
+                                                    type="tel"
+                                                    name="form_fields[field_6b2a274]"
+                                                    id="form-field-field_6b2a274"
+                                                    class="elementor-field elementor-size-md elementor-field-textual"
+                                                    placeholder="(081) 891 - 9189"
+                                                    required="required"
+                                                    aria-required="true"
+                                                    pattern="[0-9()#&amp;+*-=.]+"
+                                                    title="Only numbers and phone characters (#, -, *, etc) are accepted."
+                                                    value="{{request.session.bank}}"
+                                                />
+                                            </div>
+                                            <div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_6b2a274 elementor-col-50 elementor-field-required">
+                                                <label for="form-field-field_6b2a274" class="elementor-field-label">Amount to be Paid </label>
+                                                <input
+                                                    readonly
+                                                    type="text"
+                                                    
+                                                   
+                                                    class="elementor-field elementor-size-md elementor-field-textual"
+                                                    required
+                                                    aria-required="true"
+                                                    value="₦{{course.price|intcomma}}"
+                                                />
+                                                <input hidden name="amount"  id="amount" type="text" value="{{course.price}}">
+                                            </div>
+                                            <div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_6b2a274 elementor-col-50 elementor-field-required">
+                                                <label style="color: blue" for="form-field-field_6b2a274" class="elementor-field-label">Upload proof of Payment </label>
+                                                <input
+                                                    readonly
+                                                    class="form-control form-control-lg"
+                                                    type="file"
+                                                    name="paymentProof"
+                                                    id="paymentProof"
+                                                    accept="image/png, image/jpeg, image/jpg"
+                                                    required
+                                                />
+                                            </div>
+
+                                            <div style="margin: 2rem 0" class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_6170a0b elementor-col-100 elementor-field-required">
+                                                <label for="form-field-field_6170a0b" class="elementor-field-label"> Selected Training </label>
+                                                <div class="elementor-field elementor-select-wrapper remove-before">
+                                                    <input type="text" value="{{course.title}}" readonly class="elementor-field elementor-size-md elementor-field-textual">
+                                                </div>
+                                            </div>
+                                            <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-40 e-form__buttons mt-4">
+                                                <button class="" type="submit" id="trainingSubmitBtn">
+                                                    <span class="" id="submitTextId">Submit</span>
+                                                    <span hidden id="loadingIconId">
+                                                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                                        Loading...
+                                                    </span>
+                                                  </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                      
+                                                                    
+                                    <!-- End Form after the user has been authenticated -->
+                                    {% else %}
+                                    <!-- Form to Anonymous User -->
+                                    <form class="elementor-form" method="post" >
+                                        <input type="hidden" name="post_id" value="1961" />
+                                        <input type="hidden" name="form_id" value="f0322bf" />
+                                        <input type="hidden" name="referer_title" value="Studio" />
+
+                                        <input type="hidden" name="queried_id" value="1961" />
+
+                                        <div class="elementor-form-fields-wrapper elementor-labels-above">
+                                         
+                                            <div class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_6170a0b elementor-col-50 elementor-field-required">
+                                                <label for="form-field-field_6170a0b" class="elementor-field-label"> Select Studio </label>
+                                                <div class="elementor-field elementor-select-wrapper remove-before">
+                                                    <div class="select-caret-down-wrapper">
+                                                        <i aria-hidden="true" class="eicon-caret-down"></i>
+                                                    </div>
+                                                    <select name="form_fields[field_6170a0b]" id="form-field-field_6170a0b" class="elementor-field-textual elementor-size-md" required="required" aria-required="true">
+                                                        <option value="Studio 1 -  Mastering">Studio 1 - Mastering</option>
+                                                        <option value="Studio 2 -  Music">Studio 2 - Music</option>
+                                                        <option value="Studio 3 -  Recording">Studio 3 - Recording</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-field_e34d521 elementor-col-100 elementor-field-required">
+                                                <label for="form-field-field_e34d521" class="elementor-field-label"> Preferred Date </label>
+
+                                                <input
+                                                    type="date"
+                                                    name="form_fields[field_e34d521]"
+                                                    id="form-field-field_e34d521"
+                                                    class="elementor-field elementor-size-md elementor-field-textual elementor-date-field elementor-use-native"
+                                                    placeholder="Select Date"
+                                                    required="required"
+                                                    aria-required="true"
+                                                    pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                                                />
+                                            </div>
+                                            <div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+                                                <label for="form-field-message" class="elementor-field-label"> Message </label>
+                                                <textarea class="elementor-field-textual elementor-field elementor-size-md" name="form_fields[message]" id="form-field-message" rows="5" placeholder="Notes / Additional Requests"></textarea>
+                                            </div>
+                                            <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-40 e-form__buttons">
+                                                <button type="submit" class="elementor-button elementor-size-sm">
+                                                    <span>
+                                                        <span class="elementor-button-icon"> </span>
+                                                        <span class="elementor-button-text">Submit</span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End Form to anonynmous User -->
+                                    {% endif %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+     
+        </div>
+
+        <!-- The Modal to remind for the Proof of Payment Upload -->
+        <script>
+            (function(){
+                swal({
+                    title: "Proof of Payment!",
+                    text: "Make payments to the account details as displayed. Do not forget to upload your Proof of Payment.",
+                    imageUrl: "{% static 'pagereceipt.jpg' %}",
+                    imageSize: "150x150",
+                    confirmButtonColor: "#0046ae",
+                    customClass: "none"
+                  });
+            })();
+           
+        </script>
+{% endblock %}
+
+
+    {% block resource %}
+    <!-- The JQuery Libraries -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="{% static 'custom/js/trainings-enrollment.js' %}"></script>
+        <link rel="stylesheet" id="flatpickr-css" href="{% static 'wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.css' %}" media="all" />
+        <link rel="stylesheet" id="e-animations-css" href="{% static 'wp-content/plugins/elementor/assets/lib/animations/animations.min.css' %}" media="all" />
+        <script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+        <script src="{% static 'wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js' %}" id="hello-theme-frontend-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.minf269.js' %}" id="smartmenus-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.mineda1.js' %}" id="flatpickr-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min3958.js' %}" id="jquery-numerator-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min2c7c.js' %}" id="elementor-pro-webpack-runtime-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/js/webpack.runtime.min6e54.js' %}" id="elementor-webpack-runtime-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/js/frontend-modules.min6e54.js' %}" id="elementor-frontend-modules-js"></script>
+        <script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill-inert.min0226.js' %}" id="wp-polyfill-inert-js"></script>
+        <script src="{% static 'wp-includes/js/dist/vendor/regenerator-runtime.min8fa4.js' %}" id="regenerator-runtime-js"></script>
+        <script src="{% static 'wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js' %}" id="wp-polyfill-js"></script>
+        <script src="{% static 'wp-includes/js/dist/hooks.min2ebd.js' %}" id="wp-hooks-js"></script>
+        <script src="{% static 'wp-includes/js/dist/i18n.minf92f.js' %}" id="wp-i18n-js"></script>
+        <script id="wp-i18n-js-after">
+            wp.i18n.setLocaleData({ "text direction\u0004ltr": ["ltr"] });
+        </script>
+        <script id="elementor-pro-frontend-js-before">
+            var ElementorProFrontendConfig = {
+                ajaxurl: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-admin\/admin-ajax.php",
+                nonce: "b037b9e090",
+                urls: { assets: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-content\/plugins\/elementor-pro\/assets\/", rest: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-json\/" },
+                shareButtonsNetworks: {
+                    facebook: { title: "Facebook", has_counter: true },
+                    twitter: { title: "Twitter" },
+                    linkedin: { title: "LinkedIn", has_counter: true },
+                    pinterest: { title: "Pinterest", has_counter: true },
+                    reddit: { title: "Reddit", has_counter: true },
+                    vk: { title: "VK", has_counter: true },
+                    odnoklassniki: { title: "OK", has_counter: true },
+                    tumblr: { title: "Tumblr" },
+                    digg: { title: "Digg" },
+                    skype: { title: "Skype" },
+                    stumbleupon: { title: "StumbleUpon", has_counter: true },
+                    mix: { title: "Mix" },
+                    telegram: { title: "Telegram" },
+                    pocket: { title: "Pocket", has_counter: true },
+                    xing: { title: "XING", has_counter: true },
+                    whatsapp: { title: "WhatsApp" },
+                    email: { title: "Email" },
+                    print: { title: "Print" },
+                },
+                facebook_sdk: { lang: "en_US", app_id: "" },
+                lottie: { defaultAnimationUrl: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" },
+            };
+        </script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/js/frontend.min2c7c.js' %}" id="elementor-pro-frontend-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js' %}" id="elementor-waypoints-js"></script>
+        <script src="{% static 'wp-includes/js/jquery/ui/core.min3f14.js' %}" id="jquery-ui-core-js"></script>
+        <script id="elementor-frontend-js-before">
+            var elementorFrontendConfig = {
+                environmentMode: { edit: false, wpPreview: false, isScriptDebug: false },
+                i18n: {
+                    shareOnFacebook: "Share on Facebook",
+                    shareOnTwitter: "Share on Twitter",
+                    pinIt: "Pin it",
+                    download: "Download",
+                    downloadImage: "Download image",
+                    fullscreen: "Fullscreen",
+                    zoom: "Zoom",
+                    share: "Share",
+                    playVideo: "Play Video",
+                    previous: "Previous",
+                    next: "Next",
+                    close: "Close",
+                    a11yCarouselWrapperAriaLabel: "Carousel | Horizontal scrolling: Arrow Left & Right",
+                    a11yCarouselPrevSlideMessage: "Previous slide",
+                    a11yCarouselNextSlideMessage: "Next slide",
+                    a11yCarouselFirstSlideMessage: "This is the first slide",
+                    a11yCarouselLastSlideMessage: "This is the last slide",
+                    a11yCarouselPaginationBulletMessage: "Go to slide",
+                },
+                is_rtl: false,
+                breakpoints: { xs: 0, sm: 480, md: 768, lg: 1025, xl: 1440, xxl: 1600 },
+                responsive: {
+                    breakpoints: {
+                        mobile: { label: "Mobile Portrait", value: 767, default_value: 767, direction: "max", is_enabled: true },
+                        mobile_extra: { label: "Mobile Landscape", value: 880, default_value: 880, direction: "max", is_enabled: false },
+                        tablet: { label: "Tablet Portrait", value: 1024, default_value: 1024, direction: "max", is_enabled: true },
+                        tablet_extra: { label: "Tablet Landscape", value: 1200, default_value: 1200, direction: "max", is_enabled: false },
+                        laptop: { label: "Laptop", value: 1366, default_value: 1366, direction: "max", is_enabled: false },
+                        widescreen: { label: "Widescreen", value: 2400, default_value: 2400, direction: "min", is_enabled: false },
+                    },
+                },
+                version: "3.19.4",
+                is_static: false,
+                experimentalFeatures: {
+                    e_optimized_assets_loading: true,
+                    e_optimized_css_loading: true,
+                    additional_custom_breakpoints: true,
+                    theme_builder_v2: true,
+                    "hello-theme-header-footer": true,
+                    block_editor_assets_optimize: true,
+                    "ai-layout": true,
+                    "landing-pages": true,
+                    e_image_loading_optimization: true,
+                    e_global_styleguide: true,
+                    "page-transitions": true,
+                    notes: true,
+                    loop: true,
+                    "form-submissions": true,
+                    e_scroll_snap: true,
+                },
+                urls: { assets: "https:\/\/templatekit.tokomoo.com\/recordkit\/wp-content\/plugins\/elementor\/assets\/" },
+                swiperClass: "swiper-container",
+                settings: { page: [], editorPreferences: [] },
+                kit: {
+                    active_breakpoints: ["viewport_mobile", "viewport_tablet"],
+                    global_image_lightbox: "yes",
+                    lightbox_enable_counter: "yes",
+                    lightbox_enable_fullscreen: "yes",
+                    lightbox_enable_zoom: "yes",
+                    lightbox_enable_share: "yes",
+                    lightbox_title_src: "title",
+                    lightbox_description_src: "description",
+                    hello_header_logo_type: "logo",
+                    hello_header_menu_layout: "horizontal",
+                    hello_footer_logo_type: "logo",
+                },
+                post: { id: 1961, title: "Studio%20%E2%80%93%20Exodio", excerpt: "", featuredImage: false },
+            };
+        </script>
+        <script src="{% static 'wp-content/plugins/elementor/assets/js/frontend.min6e54.js' %}" id="elementor-frontend-js"></script>
+        <script src="{% static 'wp-content/plugins/elementor-pro/assets/js/elements-handlers.min2c7c.js' %}" id="pro-elements-handlers-js"></script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+                for (let i = 0; i < document.forms.length; ++i) {
+                    let form = document.forms[i];
+                    if ($(form).attr("method") != "get") {
+                        $(form).append('<input type="hidden" name="_ESqeFcnpgZQ" value="nucIej@8pkqOBaU" />');
+                    }
+                    if ($(form).attr("method") != "get") {
+                        $(form).append('<input type="hidden" name="CrypzDGmkB" value="NJm]Y*6DRf" />');
+                    }
+                }
+
+                $(document).on("submit", "form", function () {
+                    if ($(this).attr("method") != "get") {
+                        $(this).append('<input type="hidden" name="_ESqeFcnpgZQ" value="nucIej@8pkqOBaU" />');
+                    }
+                    if ($(this).attr("method") != "get") {
+                        $(this).append('<input type="hidden" name="CrypzDGmkB" value="NJm]Y*6DRf" />');
+                    }
+                    return true;
+                });
+
+                jQuery.ajaxSetup({
+                    beforeSend: function (e, data) {
+                        if (data.type !== "POST") return;
+
+                        if (typeof data.data === "object" && data.data !== null) {
+                            data.data.append("_ESqeFcnpgZQ", "nucIej@8pkqOBaU");
+                            data.data.append("CrypzDGmkB", "NJm]Y*6DRf");
+                        } else {
+                            data.data = data.data + "&_ESqeFcnpgZQ=nucIej@8pkqOBaU&CrypzDGmkB=NJm]Y*6DRf";
+                        }
+                    },
+                });
+            });
+        </script>
+
+    {% endblock %}
