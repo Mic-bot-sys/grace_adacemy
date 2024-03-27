@@ -5,7 +5,6 @@ from grace_forte_app.models.TrainingPaymentModel import TrainingPayment
 from django.contrib.auth.decorators import login_required
 
 from imgtempmail import ImgTemplateEmailNotify
-from tempmail import TemplateEmailNotify
 
 
 

@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import dj-database-url
 from pathlib import Path
 import os
 
@@ -172,11 +171,3 @@ LOGIN_URL = "/auth/"
 # EMAIL_HOST_USER = 'toluondrums@gmail.com'
 # EMAIL_HOST_PASSWORD = 'gjkx hkht najh gwbc'
 # DEFAULT_FROM_EMAIL = "Grace Forte"
-
-
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '5a15dc37410610'
-EMAIL_HOST_PASSWORD = '8e55b3d6dbf431'
-EMAIL_PORT = '2525'
-
-CELERY_BROKER_URL = 'redis://localhost:6379/0'

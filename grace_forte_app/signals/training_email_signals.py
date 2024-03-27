@@ -1,7 +1,6 @@
 
 # Start Signals
 from check_mail import EmailNotify
-from tempmail import ConfirmedTemplateEmailNotify, TemplateEmailNotify
 
 
 
