@@ -19,7 +19,7 @@ html = '''
     
     
 # @shared_task
-def ServiceTemplateEmailNotify(receiver:str, subject:str, body:str, name: str=""):
+def TrainingTemplateEmailNotify(receiver:str, subject:str, body:str, name: str=""):
     try:
         email_sender = "dokunmichael@gmail.com"
         email_password = "plbn gvdg rtig amac"
@@ -27,11 +27,9 @@ def ServiceTemplateEmailNotify(receiver:str, subject:str, body:str, name: str=""
 
         subject = subject
         
-        html_message = render_to_string('imgtemp.html', {"name": name, "message": body})
+        html_message = render_to_string('pending_mail.html', {"name": name, "message": body})
         # html_message = render_to_string('mail_template.html', {'context': 'values'})
         # plain_message = strip_tags(html_message)
-
-        body = f"""{body}"""
 
         emailObj = MIMEMultipart()
         emailObj['From'] = "GraceForte Academy"
@@ -51,7 +49,7 @@ def ServiceTemplateEmailNotify(receiver:str, subject:str, body:str, name: str=""
     
 
 # @shared_task
-def ConfirmedServiceTemplateEmailNotify(receiver, subject, body, name, instance):
+def ConfirmedTrainingTemplateEmailNotify(receiver, subject, body, name, instance):
     try:
         email_sender = "dokunmichael@gmail.com"
         email_password = "plbn gvdg rtig amac"
@@ -59,10 +57,7 @@ def ConfirmedServiceTemplateEmailNotify(receiver, subject, body, name, instance)
 
         subject = subject
         amount = f"{instance.expectedAmount:,}"
-        html_message = render_to_string('service_bussy.html', {"name": name, "message": body, "product": instance.service.title, "amount": amount, "duration": instance.bookedDuration})
-
-
-        body = f"""{body}"""
+        html_message = render_to_string('training_confirmation_mail.html', {"name": name, "message": body, "product": instance.enrolledCourse.title, "amount": amount, "ReceiptID": instance.receiptId})
 
         emailObj = MIMEMultipart()
         emailObj['From'] = "GraceForte Academy"

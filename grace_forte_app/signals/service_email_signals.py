@@ -1,7 +1,7 @@
 
 # Start Signals
 from check_mail import EmailNotify
-from servicemail import ConfirmedServiceTemplateEmailNotify, ServiceTemplateEmailNotify
+from grace_forte_app.special_services.servicemail import ConfirmedServiceTemplateEmailNotify, ServiceTemplateEmailNotify
 
 
 

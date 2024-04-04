@@ -36,7 +36,7 @@ def training_payment(request):
             
             # notification = EmailNotification(request.user.email, "Enrollment Notofication", "We text to inform you that you have made a move for enrollment and we will send you a confirmation mail as soon as we confirm your payment. Thank you for choosing us.")
             
-            return JsonResponse({"title": "Enrollment Successful", "message": "You will be notified via your email as soon as your Payment is confirmed", "status":"success"})
+            return JsonResponse({"title": "Request Successful", "message": "You will get a confirmation mail as soon as your Payment is confirmed", "status":"success"})
         
     except Exception as ex:
         print(ex)

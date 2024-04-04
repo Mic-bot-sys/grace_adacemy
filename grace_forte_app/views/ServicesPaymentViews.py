@@ -40,7 +40,7 @@ def service_payment(request):
         servicePayment.save()
         
        
-        return JsonResponse({"title": "Service Booking Successful", "message": "You will be notified via your email as soon as your Payment is confirmed", "status":"success"})
+        return JsonResponse({"title": "Service Request Successful", "message": "You will get a confirmation mail as soon as your Payment is confirmed", "status":"success"})
     
     except Exception as ex:
         print(ex)

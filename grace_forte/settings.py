@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f^c=%2_3^lkb2*1fv_$h#5h2ee1b@z@s_9d*br9@p+$6sbg-bd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,34 +77,34 @@ WSGI_APPLICATION = 'grace_forte.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # The Postgres Database Configurations
-DB_NAME = "defaultdb"
-DB_USER = "avnadmin" 
-DB_PASSWORD = "AVNS_W4bkLm7ad9TSvnCnxM1"
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': 'pg-5ac988e-toluondrums-1918.a.aivencloud.com',
-        'PORT': '18288',
-    }
-}
-
-
-# DB_NAME = "GraceForte"
-# DB_USER = "postgres" 
-# DB_PASSWORD = ""
+# DB_NAME = "defaultdb"
+# DB_USER = "avnadmin" 
+# DB_PASSWORD = "AVNS_W4bkLm7ad9TSvnCnxM1"
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': DB_NAME,
 #         'USER': DB_USER,
 #         'PASSWORD': DB_PASSWORD,
-#         'HOST': 'localhost',
-#         'PORT': '5432',
+#         'HOST': 'pg-5ac988e-toluondrums-1918.a.aivencloud.com',
+#         'PORT': '18288',
 #     }
 # }
+
+
+DB_NAME = "GraceForte"
+DB_USER = "postgres" 
+DB_PASSWORD = "MichAels786"
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -155,7 +155,7 @@ STATICFILES_DIRS = [
 ] 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
