@@ -37,6 +37,7 @@ function onPostTrainingEnrollment(event){
       disableTriggerSubmitIcon()
         result = JSON.parse(result)        
         result.message && swal(`${result.title}!`, `${result.message}!`, `${result.status}`)
+        window.location.href = '/pending-trainings/'
     
       },
           error: function (err) {
