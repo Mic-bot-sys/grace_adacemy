@@ -5,6 +5,8 @@ from django.db import transaction
 from grace_forte_app.models.AccountInformationModel import AccountInformation
 from grace_forte_app.models.ProfileModel import Profile
 from django.contrib.auth.decorators import login_required
+from django.db import IntegrityError
+from django.contrib import messages
 
 
 
@@ -65,20 +67,26 @@ def register(request):
             
             username = email.split('@')[0]
             
-            if password == confirmPassword:
-                with transaction.atomic():
-                    user = User.objects.create_user(username,email,password)
-                    
-                    profile = Profile(
-                        user_id = user.id,
-                        firstName=firstName,
-                        lastName=lastName,
-                        phone = phone
-                    )
-                    profile.save()
-                    request.session['debutUserEmail'] = email
-                return redirect("authentication:login")
-        
+            if password == confirmPassword:                
+                try:
+                    with transaction.atomic():
+                        user = User.objects.create_user(username,email,password)
+                        
+                        profile = Profile(
+                            user_id = user.id,
+                            firstName=firstName,
+                            lastName=lastName,
+                            phone = phone
+                        )
+                        profile.save()
+                        request.session['debutUserEmail'] = email
+                    return redirect("authentication:login")        
+                except IntegrityError as e:
+                    print("Integrity Error: ",e)
+                    messages.add_message(request, messages.ERROR, 'Email Exists. Try again!!!')
+                    return redirect("authentication:login")   
+
+              
         except Exception as ex:
             print(ex)
     
