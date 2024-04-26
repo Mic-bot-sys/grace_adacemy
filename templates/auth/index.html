@@ -11,8 +11,13 @@
   <section>
     {% if messages %}
     <ul class="messages">
+      <style>
+        .messages li{
+          list-style: none;
+        }
+      </style>
         {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red">{{ message }}</li>
+            <li{% if message.tags %} class="{{ message.tags }} alert alert-danger" role="alert""{% endif %} style="color: red">{{ message }}</li>
         {% endfor %}
     </ul>
 {% endif %}

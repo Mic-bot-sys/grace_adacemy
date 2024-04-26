@@ -27,6 +27,9 @@ def loginUser(request):
                 # prof = userObj.user_profile
                 # profName = userObj.user_profile.firstName
                 user = authenticate(username=username, password=password)
+                if user is None: 
+                    messages.error(request, "Invalid Credentials!!!. Try Again.")
+                    return redirect("authentication:auth")
                 if user.is_superuser:
                     return redirect("authentication:auth")
                 login(request, user)
