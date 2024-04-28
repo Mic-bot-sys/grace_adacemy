@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "grace_forte/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "grace_forte/wsgi.py"
+      }
+    ]
+}

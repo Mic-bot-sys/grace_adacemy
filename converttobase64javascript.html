@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <img src="./static/hn.jpeg" id="my-image" />
+
+<script>
+    const image = document.getElementById('my-image');
+
+    // Get the remote image as a Blob with the fetch API
+    fetch(image.src)
+        .then((res) => res.blob())
+        .then((blob) => {
+            // Read the Blob as DataURL using the FileReader API
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                console.log(reader.result);
+                // Logs data:image/jpeg;base64,wL2dvYWwgbW9yZ...
+
+                // Convert to Base64 string
+                let splitted = reader.result.split("base64,")
+                let actualBase = splitted[1]
+                //const base64 = getBase64StringFromDataURL(reader.result);
+                console.log(actualBase);
+                // Logs wL2dvYWwgbW9yZ...
+            };
+            reader.readAsDataURL(blob);
+        });
+</script>
+    </section>
+</body>
+</html>

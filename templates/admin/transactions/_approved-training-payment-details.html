@@ -1,0 +1,53 @@
+{% load humanize %}
+  
+  <div class="modal fade" id="approvedId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">View Transaction</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="sender">Payment By</label>
+            <input type="email" class="form-control" id="sender"  readonly value="{{approved_transaction.user.user_profile.lastName}} {{approved_transaction.user.user_profile.firstName}}">
+            <small id="emailHelp" class="form-text text-muted">This is the User that made the Payment.</small>
+          </div>
+          <div class="form-group mt-4">
+            <label for="approvedDate">Date Approved</label>
+            <input type="text" class="form-control" id="approvedDate"  readonly value="{{approved_transaction.approvedDate}}">
+            <small id="emailHelp" class="form-text text-muted">This is the User that made the Payment.</small>
+          </div>
+          <div class="form-group text-center mt-4">
+            <img src="data:img/webp;base64,{{approved_transaction.proofBase}}" style="height: 100%; width: 100%" alt=""/>
+          </div>
+          <div class="form-group mt-4">
+            <div class="row col-xl-12">
+              <div class="col-xl-6">
+                <label for="amount">Amount Paid</label>
+              <input type="text" class="form-control" id="amount" readonly value="{{approved_transaction.expectedAmount|intcomma}}">
+              </div>
+              <div class="col-xl-6">
+                <label for="account">Account No</label>
+                <input type="text" class="form-control" id="account"  readonly value="{{approved_transaction.account.accountNo}}">
+              </div>
+            </div>
+            <div class="form-group mt-4">
+              <label for="accountName">Account Name</label>
+              <input type="text" class="form-control" id="accountName" readonly value="{{approved_transaction.account.accountName}}">
+            </div>
+            <div class="form-group mt-4">
+              <label for="bank">Bank</label>
+              <input type="text" class="form-control" id="bank" readonly value="{{approved_transaction.account.bank}}">
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="onCloseModal('approvedId')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

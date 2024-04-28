@@ -1,0 +1,6 @@
+success 
+muted
+warning
+info
+primary
+danger

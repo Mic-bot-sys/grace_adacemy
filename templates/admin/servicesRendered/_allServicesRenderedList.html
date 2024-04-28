@@ -1,0 +1,25 @@
+<table class="table table-borderless datatable">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Session Duration</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for data in servicesRendered %}
+      <tr>
+        <input type="text" value="{{data.Id}}" id="servicesRenderedId" hidden>
+        <th scope="row" ><img src="data:img/png;base64,{{data.actual_image_file}}" width="30" height="30" alt=""></th>
+        <td>{{data.title}}</td>
+        <td>N {{data.price}}</td>
+        <td><a href="#" class="text-primary">{{data.priceType}}</a></td>
+        <td><button class="btn btn-success btn-sm" onclick="onApprove(event,'{{data.Id}}')">Make Unavailable</button></td>
+        <!-- <td><a href="#myModal" class="trigger-btn" data-toggle="modal">Confirm</a></td> -->
+      </tr>
+      {% endfor %}
+     
+    </tbody>
+  </table>

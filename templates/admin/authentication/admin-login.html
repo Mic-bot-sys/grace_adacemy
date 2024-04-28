@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Admin Login</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/logo.png' %}" rel="icon">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'admin_base/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'admin_base/assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'admin_base/assets/css/custom.css' %}" rel="stylesheet">
+
+</head>
+
+<body >
+
+  <main class="themain" style="background: url('./../../static/admin_base/assets/adminlogin.jpg') center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+              <div class="card mb-3" style="background-color: rgb(245, 245, 245);">
+
+                <div class="card-body pb-5">
+
+                  <div class="pt-4 pb-0">
+                    <div class="d-flex justify-content-center py-0">
+                        <img src="{% static 'images/logo.png' %}" alt="" width="130" height="120">
+                    </div>
+      
+      
+
+                    <h5 class="card-title text-center pb-0 fs-5">Admin Login</h5>
+                  </div>
+
+                  <form class="row g-3" name="myform">
+                    {% csrf_token %}
+
+                    <div class="col-12">
+                      <label for="" class="form-label auth-text" >Username</label>
+                      <div class="input-group has-validation">
+                        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+                        <input type="text" name="username" id="username" class="form-control" required>                        
+                      </div>
+                      <div class="invalid-username" hidden style="color: red; font-size: 13px">Please enter your username!</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="yourPassword" class="form-label auth-text">Password</label>
+                      <input type="password" name="password" class="form-control" id="password" required>
+                      <div class="empty-password" hidden style="color: red; font-size: 13px">Please enter your password!</div>
+                      <div class="invalid-password" hidden style="color: red; font-size: 13px">Password length must be greater than 5</div>
+                    </div>
+
+                    <div class="col-12">
+                    </div>
+                    <div class="col-12 loginBtnDiv">
+                      <button class="form-control login-text major-btn" onclick="onPostLogin(event)" id="loginButton">
+                        <span class="button-text">Login</span>
+                        <span class="spin-icon" hidden style="color: grey">
+                          Please wait....<i class="fa fa-circle-o-notch fa-spin" style="margin-left: 5px"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'admin_base/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/chart.js/chart.umd.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'admin_base/assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'admin_base/assets/js/main.js' %}"></script>
+  <script src="{% static 'admin_base/assets/js/custom.js' %}"></script>
+
+  <!-- JQuery Files -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</body>
+
+</html>
